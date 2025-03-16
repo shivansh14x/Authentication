@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage of Auth</title>
     <style>
-        body{
-            padding:30px;
-            background:linear-gradient(to right, #e2e2e2, #c9d6ff);
-        }
-        h1{
-            text-align:center;
-
-        }
-        button{
-            color:blueviolet;
-            background-color:#c9d6ff;
-            padding:5px;
-            border-radius:5px;
-            font-size:1rem;
-            font-weight:bold;
-            border:none;
-        }
-        button:hover{
-            text-decoration: underline;
-            color:blue;
-        }
-        button, div{
-            margin-left:15%;
-            font-size:20px;
-            padding:10px;
-        }
-        div{
-            font-weight:400;
-            color:rgb(12,11,11);
-
-        }
-        span{
-            font-weight:600;
-            font-size:22px;
-            color:black;
-        }
+      body {
+        padding: 30px;
+        background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      .info {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 500px;
+        margin-bottom: 20px;
+      }
+      .info div {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      .info span {
+        font-weight: 600;
+        font-size: 20px;
+        color: #333;
+      }
+      button {
+        color: #fff;
+        background-color: #4caf50;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
     </style>
     <script type="module" src="./homepage.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Welcome to the Homepage</h1>
-    <div>First Name: <span id="loggedUserFName"></span></div>
-    <div>Last Name: <span id="loggedUserLName"></span></div>
-    <div>Email: <span id="loggedUserEmail"></span></div>
+    <div class="info">
+      <div>First Name: <span id="loggedUserFName"></span></div>
+      <div>Last Name: <span id="loggedUserLName"></span></div>
+      <div>Email: <span id="loggedUserEmail"></span></div>
+    </div>
     <button id="logout">Logout</button>
-</body>
+  </body>
 </html>
